@@ -98,4 +98,22 @@ declare namespace API {
     description?: string;
     type?: NoticeIconItemType;
   };
+
+  type crawlerListItem = {
+    id: number,
+    tag_href: string
+    tag_text: string,
+    tag_type: number,
+    remark?: string
+    created_at: string
+    update_at: string
+  };
+
+  type crawlerDataList = {
+    data?: crawlerListItem[];
+    /** 列表的内容总数 */
+    total?: number;
+    success?: boolean;
+  };
 }
+
